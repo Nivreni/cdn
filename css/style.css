@@ -1,0 +1,709 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+html, body {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Noto Sans CJK SC", "Source Han Sans CN", "PingFangSC-Regular", "sans-serif", "Arial", "Microsoft YaHei";
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, table, tbody, thead, tfoot, tr, td, th, input {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("https://cdn.jsdmirror.com/gh/Nivreni/cdn@refs/heads/main/images/bg22.jpg") no-repeat center/cover;
+}
+h1, h2, h3, h4, h5, h6, em, h6, b, p {
+    font-weight: normal;
+    font-style: normal;
+}
+article, aside, dialog, footer, header, section, footer, nav, figure, menu, hgroup {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+img, hr {
+    border: none;
+    -ms-interpolation-mode: bicubic;
+}
+img {
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+a:hover {
+    color: #000;
+}
+
+ul, li {
+    list-style: none outside none;
+}
+ul:after {
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+    content: ".";
+}
+table {
+    border-collapse: collapse;
+}
+select::-ms-expand {
+    display: none;
+}
+form {
+    background-color: transparent !important;
+}
+::selection {
+    background-color: #174dd3;
+    color: #fff;
+    /* Safari */
+}
+::-moz-selection {
+    background-color: #174dd3;
+    color: #fff;
+    /* Firefox */
+}
+:focus {
+    outline: none;
+}
+.clear {
+    clear: both;
+}
+.fl {
+    float: left !important;
+}
+.fr {
+    float: right !important;
+}
+body-flex {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.Email-Wrap {
+    width: 92%;
+    max-width: 380px;
+    background-color: rgba(255, 255, 255, 0.90);
+    padding: 20px 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -moz-box-shadow: 0px 0px 20px #333333;
+    -webkit-box-shadow: 0px 0px 20px #333333;
+    box-shadow: 0px 0px 20px #333333;
+    margin-right: 100px;
+}
+.Email-Wrap .Email-logo {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+.Email-Wrap .Email-logo img {
+    max-width: 200px;
+}
+.Email-Wrap .Email-Tit {
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: bold;
+}
+.Email-Wrap .Email-Tit h1 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 300;
+}
+.Email-Wrap .Email-List {
+    width: 100%;
+    padding-top: 5px;
+}
+.Email-Wrap .Email-List li {
+    width: 98%;
+    height: 36px;
+    border: 1px #e0e0e0 solid;
+    margin-top: 15px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    overflow: hidden;
+    float: left;
+    background-color: #fff;
+    position: relative;
+}
+.Email-Wrap .Email-List li .Email-Ico {
+    width: 36px;
+    height: 36px;
+    float: left;
+    border-right: 1px #e0e0e0 solid;
+    background-color: #f5f5f5;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Email-Wrap .Email-List li .item{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.Email-Wrap .Email-List li .Email-Input {
+    width: calc(100% - 37px);
+    float: left;
+    padding: 9px 10px;
+    border-width: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #666;
+    outline: medium none;
+    font-family: "Noto Sans CJK SC", "Source Han Sans CN", "PingFangSC-Regular", "sans-serif", "Arial", "Microsoft YaHei";
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.Email-Wrap .Email-List li .item .Email-Input{
+    padding: 9px 130px 9px 10px;
+}
+.Email-Wrap .Email-List li p{
+    position: absolute;
+    right: 10px;
+    max-width: 120px;
+    display: block;
+    color: #666;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.Email-Wrap .Email-List li .Email-Input.W122 {
+    width: 122px;
+}
+.Email-Wrap .Email-List li .Email-houzui {
+    line-height: 36px;
+    color: #666;
+    font-size: 14px;
+    float: left;
+}
+.Email-Wrap .Email-Forget {
+    width: 100%;
+    margin-top: 10px;
+    line-height: 36px;
+    float: left;
+}
+.Email-Wrap .Email-Forget .Email-Forget-l {
+    float: left;
+    color: #666;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+.Email-Wrap .Email-Forget .Email-Forget-l label{
+    display: flex;
+    align-items: center;
+}
+.Email-Wrap .Email-Forget .Email-Forget-l .Forget-Input {
+    appearance: menu;
+    margin-right: 2px;
+}
+.Email-Wrap .Email-Forget a {
+    color: #666;
+    display: block;
+    float: right;
+}
+.Email-Wrap .Email-But {
+    width: 100%;
+    height: 42px;
+    display: block;
+    text-align: center;
+    line-height: 42px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+    background-color: #115fad;
+    border-width: 0px;
+}
+.Email-Wrap .Email-But:hover {
+    background-color: #115fad;
+}
+.Email-Wrap .Email-Wjmm {
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+.Email-Wrap .Email-Wjmm:hover {
+    color: #115fad;
+}
+.add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 14px 0;
+}
+.Email-Code {
+    width: 300px;
+    height: 38px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+.Email-Code .Email-Code-Ico {
+    width: 36px;
+    height: 36px;
+    float: left;
+    border: 1px #e0e0e0 solid;
+    background-color: #f5f5f5;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+    -o-border-radius: 3px 0 0 3px;
+}
+.Email-Code .Email-Code-Input {
+    width: 122px;
+    float: left;
+    padding: 10px 10px 10px;
+    border: 1px #e0e0e0 solid;
+    border-left-width: 0px;
+    background-color: #fff;
+    color: #666;
+    outline: medium none;
+    font-family: "Noto Sans CJK SC", "Source Han Sans CN", "PingFangSC-Regular", "sans-serif", "Arial", "Microsoft YaHei";
+    font-size: 14px;
+}
+.Email-Code .Email-Code-Num {
+    width: 110px;
+    height: 38px;
+    background-color: #000;
+    float: right;
+}
+.footer {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    left: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.footer .copyright {
+    margin-top: 12px;
+    color: #fff;
+}
+.footer .copyright a {
+    color: #fff;
+    padding-left: 10px;
+}
+#msgpid {
+    line-height: 36px;
+    color: #ff0000;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Email-Wrap {
+        padding: 20px;
+        margin-right: 0;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .header-Wrap{
+        position: initial;
+        max-width: 80%;
+        margin-top: -80px;
+    }
+    .Email-Wrap .Email-List li{
+        margin-top: 10px;
+    }
+    .Email-Code{
+        margin-top: 10px;
+    }
+    .Email-Wrap .Email-logo {
+        padding: 10px 0 20px;
+    }
+    .Email-Wrap .Email-logo img {
+        max-width: 232px;
+    }
+}
+
+
+/* -------------- 动画 -------------- */
+.animated {
+    -o-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -o-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.animated.infinite {
+    -o-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+.animated.hinge {
+    -o-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-o-keyframes bounceInLeft {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(-3000px, 0, 0);
+        -moz-transform: translate3d(-3000px, 0, 0);
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(25px, 0, 0);
+        -moz-transform: translate3d(25px, 0, 0);
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(-10px, 0, 0);
+        -moz-transform: translate3d(-10px, 0, 0);
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(5px, 0, 0);
+        -moz-transform: translate3d(5px, 0, 0);
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@-moz-keyframes bounceInLeft {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(-3000px, 0, 0);
+        -moz-transform: translate3d(-3000px, 0, 0);
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(25px, 0, 0);
+        -moz-transform: translate3d(25px, 0, 0);
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(-10px, 0, 0);
+        -moz-transform: translate3d(-10px, 0, 0);
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(5px, 0, 0);
+        -moz-transform: translate3d(5px, 0, 0);
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@-webkit-keyframes bounceInLeft {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(-3000px, 0, 0);
+        -moz-transform: translate3d(-3000px, 0, 0);
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(25px, 0, 0);
+        -moz-transform: translate3d(25px, 0, 0);
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(-10px, 0, 0);
+        -moz-transform: translate3d(-10px, 0, 0);
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(5px, 0, 0);
+        -moz-transform: translate3d(5px, 0, 0);
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes bounceInLeft {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(-3000px, 0, 0);
+        -moz-transform: translate3d(-3000px, 0, 0);
+        -webkit-transform: translate3d(-3000px, 0, 0);
+        transform: translate3d(-3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(25px, 0, 0);
+        -moz-transform: translate3d(25px, 0, 0);
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(-10px, 0, 0);
+        -moz-transform: translate3d(-10px, 0, 0);
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(5px, 0, 0);
+        -moz-transform: translate3d(5px, 0, 0);
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.bounceInLeft {
+    -o-animation-name: bounceInLeft;
+    -moz-animation-name: bounceInLeft;
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+}
+@-o-keyframes bounceInRight {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(3000px, 0, 0);
+        -moz-transform: translate3d(3000px, 0, 0);
+        -webkit-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(-25px, 0, 0);
+        -moz-transform: translate3d(-25px, 0, 0);
+        -webkit-transform: translate3d(-25px, 0, 0);
+        transform: translate3d(-25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(10px, 0, 0);
+        -moz-transform: translate3d(10px, 0, 0);
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(-5px, 0, 0);
+        -moz-transform: translate3d(-5px, 0, 0);
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@-moz-keyframes bounceInRight {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(3000px, 0, 0);
+        -moz-transform: translate3d(3000px, 0, 0);
+        -webkit-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(-25px, 0, 0);
+        -moz-transform: translate3d(-25px, 0, 0);
+        -webkit-transform: translate3d(-25px, 0, 0);
+        transform: translate3d(-25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(10px, 0, 0);
+        -moz-transform: translate3d(10px, 0, 0);
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(-5px, 0, 0);
+        -moz-transform: translate3d(-5px, 0, 0);
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@-webkit-keyframes bounceInRight {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(3000px, 0, 0);
+        -moz-transform: translate3d(3000px, 0, 0);
+        -webkit-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(-25px, 0, 0);
+        -moz-transform: translate3d(-25px, 0, 0);
+        -webkit-transform: translate3d(-25px, 0, 0);
+        transform: translate3d(-25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(10px, 0, 0);
+        -moz-transform: translate3d(10px, 0, 0);
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(-5px, 0, 0);
+        -moz-transform: translate3d(-5px, 0, 0);
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes bounceInRight {
+    0%, 100%, 60%, 75%, 90% {
+        -o-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -moz-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+        transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+    0% {
+        opacity: 0;
+        -o-transform: translate3d(3000px, 0, 0);
+        -moz-transform: translate3d(3000px, 0, 0);
+        -webkit-transform: translate3d(3000px, 0, 0);
+        transform: translate3d(3000px, 0, 0);
+    }
+    60% {
+        opacity: 1;
+        -o-transform: translate3d(-25px, 0, 0);
+        -moz-transform: translate3d(-25px, 0, 0);
+        -webkit-transform: translate3d(-25px, 0, 0);
+        transform: translate3d(-25px, 0, 0);
+    }
+    75% {
+        -o-transform: translate3d(10px, 0, 0);
+        -moz-transform: translate3d(10px, 0, 0);
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+    }
+    90% {
+        -o-transform: translate3d(-5px, 0, 0);
+        -moz-transform: translate3d(-5px, 0, 0);
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+    100% {
+        -o-transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.bounceInRight {
+    -o-animation-name: bounceInRight;
+    -moz-animation-name: bounceInRight;
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+}
