@@ -1,0 +1,655 @@
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #dfe8f5;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "PingFang SC",
+        "Helvetica Neue",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+    color: #1d1d1f;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(235, 244, 255, 0.30),
+            rgba(245, 240, 255, 0.20)
+        ),
+        url("https://cdn.jsdmirror.com/gh/Nivreni/cdn@refs/heads/main/images/bg22.jpg") center center / cover no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    left: -120px;
+    top: -120px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(120, 180, 255, 0.26) 0%,
+            rgba(120, 180, 255, 0) 72%
+        );
+    filter: blur(20px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 430px;
+    height: 430px;
+    right: -140px;
+    bottom: -150px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(170, 130, 255, 0.23) 0%,
+            rgba(170, 130, 255, 0) 72%
+        );
+    filter: blur(20px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.Email-Wrap {
+    position: relative !important;
+    z-index: 2 !important;
+    width: min(92vw, 430px) !important;
+    margin: 24px auto !important;
+    padding: 34px 34px 30px !important;
+    border-radius: 30px !important;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.68),
+            rgba(255, 255, 255, 0.39)
+        ) !important;
+    border: 1px solid rgba(255, 255, 255, 0.64) !important;
+    box-shadow:
+        0 28px 70px rgba(35, 55, 85, 0.19),
+        inset 0 1px 0 rgba(255, 255, 255, 0.76),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.18) !important;
+    backdrop-filter:
+        blur(28px)
+        saturate(155%);
+    -webkit-backdrop-filter:
+        blur(28px)
+        saturate(155%);
+    overflow: hidden;
+}
+
+.Email-Wrap::before {
+    content: "";
+    position: absolute;
+    left: -20%;
+    top: -55%;
+    width: 140%;
+    height: 85%;
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(255, 255, 255, 0.50) 0%,
+            rgba(255, 255, 255, 0) 68%
+        );
+    pointer-events: none;
+    z-index: 0;
+}
+
+.Email-logo {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 8px !important;
+}
+
+.Email-logo img {
+    width: auto !important;
+    max-width: 150px !important;
+    height: auto !important;
+    display: inline-block;
+    border: 0;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    filter:
+        drop-shadow(
+            0 5px 12px rgba(30, 50, 80, 0.10)
+        );
+}
+
+.Email-Tit {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 24px !important;
+}
+
+.Email-Tit h1 {
+    margin: 0 !important;
+    font-size: 26px !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px;
+    color: #1d1d1f;
+    text-shadow:
+        0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+.Email-List {
+    position: relative;
+    z-index: 2;
+    width: 100% !important;
+}
+
+.Email-List ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+}
+
+.Email-List li {
+    width: 100% !important;
+    margin: 0 0 14px !important;
+    padding: 0 !important;
+}
+
+.Email-List .item {
+    position: relative;
+    width: 100% !important;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    border-radius: 17px !important;
+    background:
+        rgba(255, 255, 255, 0.58) !important;
+    border:
+        1px solid rgba(255, 255, 255, 0.58) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.60),
+        0 5px 18px rgba(50, 70, 95, 0.05) !important;
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.Email-List .item:focus-within {
+    background:
+        rgba(255, 255, 255, 0.74) !important;
+    border-color:
+        rgba(255, 255, 255, 0.90) !important;
+    box-shadow:
+        0 0 0 3px rgba(80, 150, 255, 0.10),
+        0 7px 22px rgba(50, 70, 95, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
+}
+
+.Email-Ico {
+    width: 23px !important;
+    height: 23px !important;
+    flex: 0 0 23px;
+    margin-left: 17px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    opacity: 0.58;
+}
+
+.Email-Input {
+    width: auto !important;
+    flex: 1 1 auto;
+    height: 52px !important;
+    margin: 0 !important;
+    padding: 0 17px 0 13px !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #222 !important;
+    outline: none !important;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "PingFang SC",
+        "Microsoft YaHei",
+        sans-serif !important;
+    font-size: 16px !important;
+    line-height: 52px !important;
+}
+
+.Email-Input::placeholder {
+    color: rgba(60, 60, 67, 0.52);
+}
+
+.Email-Forget {
+    position: relative;
+    z-index: 2;
+    margin: 6px 0 16px !important;
+    min-height: 24px;
+    font-size: 13px;
+}
+
+.Email-Forget-l {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+}
+
+.Email-Forget label {
+    color: rgba(50, 50, 55, 0.78);
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.Forget-Input {
+    accent-color: #3978ff;
+}
+
+.loginerror {
+    position: relative;
+    z-index: 2;
+    min-height: 20px;
+    margin: 0 2px 8px !important;
+    color: #d93025;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.Email-But {
+    position: relative;
+    z-index: 2;
+    width: 100% !important;
+    height: 52px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border:
+        1px solid rgba(255, 255, 255, 0.46) !important;
+    border-radius: 17px !important;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(38, 129, 255, 0.92),
+            rgba(88, 98, 235, 0.92)
+        ) !important;
+    color: #fff !important;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "PingFang SC",
+        "Microsoft YaHei",
+        sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow:
+        0 10px 25px rgba(70, 110, 230, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.30) !important;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
+}
+
+.Email-But:hover {
+    filter: brightness(1.04);
+    box-shadow:
+        0 13px 30px rgba(70, 110, 230, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.34) !important;
+}
+
+.Email-But:active {
+    transform: scale(0.985);
+    box-shadow:
+        0 6px 16px rgba(70, 110, 230, 0.22) !important;
+}
+
+.add-btn {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 15px !important;
+    text-align: center;
+}
+
+.Email-Wjmm {
+    float: none !important;
+    display: inline-block;
+    color: rgba(40, 70, 115, 0.80) !important;
+    font-size: 13px;
+    text-decoration: none;
+    transition:
+        color 0.2s ease;
+}
+
+.Email-Wjmm:hover {
+    color: #206cff !important;
+}
+
+.Email-Code {
+    position: relative;
+    z-index: 2;
+    width: 100% !important;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px !important;
+    padding: 0 !important;
+    border-radius: 15px !important;
+    overflow: hidden;
+    background:
+        rgba(255, 255, 255, 0.58) !important;
+    border:
+        1px solid rgba(255, 255, 255, 0.58) !important;
+}
+
+.Email-Code-Ico {
+    width: 42px !important;
+    height: 42px !important;
+    flex: 0 0 42px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px !important;
+    opacity: 0.58;
+}
+
+.Email-Code-Input {
+    width: auto !important;
+    flex: 1 1 auto;
+    height: 42px !important;
+    float: none !important;
+    padding: 0 10px !important;
+    border: 0 !important;
+    background: transparent !important;
+    outline: none !important;
+    color: #333 !important;
+    font-size: 14px !important;
+}
+
+#codeImgWrap {
+    float: none !important;
+    flex: 0 0 113px;
+    width: 113px !important;
+    height: 38px !important;
+    padding: 2px 5px !important;
+    margin: 0 !important;
+}
+
+#codeImgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.footer {
+    position: relative;
+    z-index: 2;
+    width: min(94vw, 800px);
+    margin-top: 4px;
+    margin-bottom: 20px;
+    padding:
+        0
+        max(10px, env(safe-area-inset-right))
+        0
+        max(10px, env(safe-area-inset-left));
+    text-align: center;
+}
+
+.copyright {
+    color:
+        rgba(255, 255, 255, 0.86);
+    font-size: 12px;
+    line-height: 1.8;
+    text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.28);
+}
+
+.copyright a {
+    color:
+        rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+}
+
+@supports not (backdrop-filter: blur(20px)) {
+    .Email-Wrap {
+        background:
+            rgba(255, 255, 255, 0.92) !important;
+        box-shadow:
+            0 20px 55px rgba(20, 35, 60, 0.18) !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        justify-content: center;
+        padding:
+            max(20px, env(safe-area-inset-top))
+            0
+            max(20px, env(safe-area-inset-bottom));
+    }
+
+    .Email-Wrap {
+        width: min(90vw, 430px) !important;
+        margin: 10px auto !important;
+        padding: 30px 26px 27px !important;
+        border-radius: 26px !important;
+    }
+
+    .Email-Tit h1 {
+        font-size: 24px !important;
+    }
+
+    .footer {
+        margin-top: 2px;
+        margin-bottom: 8px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        justify-content: center;
+        padding:
+            max(14px, env(safe-area-inset-top))
+            0
+            max(14px, env(safe-area-inset-bottom));
+    }
+
+    .Email-Wrap {
+        width: calc(100vw - 28px) !important;
+        max-width: none !important;
+        margin: 8px auto !important;
+        padding: 25px 20px 22px !important;
+        border-radius: 23px !important;
+        box-shadow:
+            0 20px 50px rgba(30, 45, 75, 0.17),
+            inset 0 1px 0 rgba(255, 255, 255, 0.78) !important;
+        backdrop-filter:
+            blur(22px)
+            saturate(145%);
+        -webkit-backdrop-filter:
+            blur(22px)
+            saturate(145%);
+    }
+
+    .Email-logo {
+        margin-bottom: 5px !important;
+    }
+
+    .Email-logo img {
+        max-width: 126px !important;
+    }
+
+    .Email-Tit {
+        margin-bottom: 20px !important;
+    }
+
+    .Email-Tit h1 {
+        font-size: 22px !important;
+        letter-spacing: 0;
+    }
+
+    .Email-List li {
+        margin-bottom: 12px !important;
+    }
+
+    .Email-List .item {
+        min-height: 51px;
+        border-radius: 15px !important;
+    }
+
+    .Email-Ico {
+        width: 21px !important;
+        height: 21px !important;
+        flex-basis: 21px;
+        margin-left: 15px !important;
+    }
+
+    .Email-Input {
+        height: 49px !important;
+        line-height: 49px !important;
+        font-size: 16px !important;
+        padding-left: 11px !important;
+        padding-right: 13px !important;
+    }
+
+    .Email-Forget {
+        margin-top: 4px !important;
+        margin-bottom: 13px !important;
+    }
+
+    .Email-Forget-l {
+        gap: 5px 8px;
+    }
+
+    .Email-Forget label {
+        font-size: 11px;
+    }
+
+    .Email-But {
+        height: 50px !important;
+        border-radius: 15px !important;
+        font-size: 16px !important;
+    }
+
+    .add-btn {
+        margin-top: 13px !important;
+    }
+
+    .Email-Wjmm {
+        font-size: 12px;
+    }
+
+    .footer {
+        width: calc(100vw - 28px);
+        margin-top: 2px;
+        margin-bottom: 3px;
+    }
+
+    .copyright {
+        font-size: 10px;
+        line-height: 1.65;
+    }
+
+    #codeImgWrap {
+        flex-basis: 98px;
+        width: 98px !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .Email-Wrap {
+        width: calc(100vw - 20px) !important;
+        padding: 22px 16px 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .Email-logo img {
+        max-width: 112px !important;
+    }
+
+    .Email-Tit h1 {
+        font-size: 20px !important;
+    }
+
+    .Email-Input {
+        font-size: 15px !important;
+    }
+
+    .Email-Forget-l {
+        gap: 4px 6px;
+    }
+
+    .Email-Forget label {
+        font-size: 10px;
+    }
+
+    .copyright {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    body {
+        justify-content: flex-start;
+        padding-top:
+            max(12px, env(safe-area-inset-top));
+        overflow-y: auto;
+    }
+
+    .Email-Wrap {
+        margin-top: 12px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .footer {
+        margin-bottom: 12px;
+    }
+}
+
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
